@@ -3,7 +3,7 @@ package SistemaFinanceiro;
 // modelo, não crio mais objeto diretos
 public abstract class Conta {
 
-    private String numero;
+    public String numero;
     private double saldo;
     private Cliente titular;
 
