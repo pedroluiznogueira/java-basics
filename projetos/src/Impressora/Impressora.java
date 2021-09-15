@@ -1,8 +1,8 @@
 public class Impressora {
     // Relaciona à não podermos instanciar objetos da impressora e da interface imprimiveis
-    private Imprimivel[] documentos = new Imprimivel[10];
+    private DocumentoGenerico[] documentos = new DocumentoGenerico[10];
 
-    public void adicionarDocumento(Imprimivel imprimivel) {
+    public void adicionarDocumento(DocumentoGenerico imprimivel) {
         for (int i = 0; i < documentos.length; i++) {
             if (documentos[i] == null) {
                 documentos[i] = imprimivel;
@@ -17,6 +17,7 @@ public class Impressora {
             if (documentos[i] == null) {
                 break;
             } else {
+                // Aqui está sendo delegado, só vai ser sinalizado o comportamento de se imprima, portante aparece a necessidade da interface
                 documentos[i].imprimir();
             }
 

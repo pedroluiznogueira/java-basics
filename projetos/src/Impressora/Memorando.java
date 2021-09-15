@@ -1,4 +1,4 @@
-public class Memorando implements Imprimivel {
+public class Memorando extends DocumentoGenerico implements Imprimivel {
     private String numero;
 
     @Override
