@@ -8,14 +8,6 @@ public class SistemaFinanceiro {
 //        caixaEletronico.efetuarSaque(20);
 //        caixaEletronico.efetuarTransferencia(contaDestino, 40);
 //        caixaEletronico.encerrarUtilizacao();
-        Cliente titular = new Cliente("Fabio", "Silva");
-        titular.setIdentificador(1);
-
-        Cliente outroTitular = new Cliente("Fulano", "De tal");
-        titular.setIdentificador(2);
-
-        Cliente maisUmTitular = new Cliente("Beltrano", "De tal");
-        titular.setIdentificador(3);
 //
 //        ContaConjunta contaConjunta = new ContaConjunta(titular);
 //
@@ -35,7 +27,18 @@ public class SistemaFinanceiro {
 //            System.out.println("Nome: " + titulares.getNome() + ", sobrenome: " + titulares.getSobrenome());
 //        }
 
-// Classes wrappers encapsulam os comportamentos dos tipos primitivo
+        // Classes wrappers encapsulam os comportamentos dos tipos primitivo
+
+        // Os identificadores não precisariam seguir uma ordem sequencial
+
+        Cliente titular = new Cliente("Fabio", "Silva");
+        titular.setIdentificador(1);
+
+        Cliente outroTitular = new Cliente("Fulano", "De tal");
+        outroTitular.setIdentificador(2);
+
+        Cliente maisUmTitular = new Cliente("Beltrano", "De tal");
+        maisUmTitular.setIdentificador(3);
 
         Map<Integer, Cliente> clientes = new HashMap<Integer, Cliente>();
 

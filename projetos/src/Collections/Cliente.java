@@ -44,4 +44,9 @@ public class Cliente {
     public void setIdentificador(Integer identificador) {
         this.identificador = identificador;
     }
+
+    @Override
+    public String toString() {
+        return this.nome + " " + this.sobrenome;
+    }
 }
