@@ -2,6 +2,7 @@ package Collections;
 
 public class Cliente {
 
+    private Integer identificador;
     private String nome;
     private String sobrenome;
 
@@ -34,5 +35,13 @@ public class Cliente {
     public void setSobrenome(String sobrenome) {
 
         this.sobrenome = sobrenome;
+    }
+
+    public Integer getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(Integer identificador) {
+        this.identificador = identificador;
     }
 }

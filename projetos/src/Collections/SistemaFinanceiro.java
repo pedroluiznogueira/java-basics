@@ -8,9 +8,14 @@ public class SistemaFinanceiro {
 //        caixaEletronico.efetuarSaque(20);
 //        caixaEletronico.efetuarTransferencia(contaDestino, 40);
 //        caixaEletronico.encerrarUtilizacao();
-//        Cliente titular = new Cliente("Fabio", "Silva");
-//        Cliente outroTitular = new Cliente("Fulano", "De tal");
-//        Cliente maisUmTitular = new Cliente("Beltrano", "De tal");
+        Cliente titular = new Cliente("Fabio", "Silva");
+        titular.setIdentificador(1);
+
+        Cliente outroTitular = new Cliente("Fulano", "De tal");
+        titular.setIdentificador(2);
+
+        Cliente maisUmTitular = new Cliente("Beltrano", "De tal");
+        titular.setIdentificador(3);
 //
 //        ContaConjunta contaConjunta = new ContaConjunta(titular);
 //
@@ -30,22 +35,18 @@ public class SistemaFinanceiro {
 //            System.out.println("Nome: " + titulares.getNome() + ", sobrenome: " + titulares.getSobrenome());
 //        }
 
-        // Classes wrappers encapsulam os comportamentos dos tipos primitivos
-        // O set precisa vir de alguém que extende Object, e tipos primitivos não extendem nada
+// Classes wrappers encapsulam os comportamentos dos tipos primitivo
 
-        // TreeSet ordena-os e não os repete
-        Set<Integer> numeros = new TreeSet<Integer>();
+        Map<Integer, Cliente> clientes = new HashMap<Integer, Cliente>();
 
-        numeros.add(2);
-        numeros.add(10);
-        numeros.add(1);
-        numeros.add(25);
-        numeros.add(2);
-        numeros.add(12);
-        numeros.add(3);
+        clientes.put(titular.getIdentificador(), titular);
+        clientes.put(titular.getIdentificador(), titular); // não será inserido repetidamente, atualiza o dado anterior
+        clientes.put(outroTitular.getIdentificador(), outroTitular);
+        clientes.put(maisUmTitular.getIdentificador(), maisUmTitular);
 
-        for (Integer numero: numeros) {
-            System.out.println(numero);
+        // Para cada chave, ele pega as chaves com keySet
+        for (Integer chave: clientes.keySet()) {
+            System.out.println("Cliente de chave: " + chave + ": " + clientes.get(chave));
         }
 
 
