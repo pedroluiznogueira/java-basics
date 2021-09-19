@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class SistemaFinanceiro {
 
@@ -9,14 +10,8 @@ public class SistemaFinanceiro {
 //        caixaEletronico.efetuarTransferencia(contaDestino, 40);
 //        caixaEletronico.encerrarUtilizacao();
 //
-//        ContaConjunta contaConjunta = new ContaConjunta(titular);
 //
 //        // Da para usar herança para adicionar elementos que não sejam do tipo Cliente diretamente
-//        List<Cliente> outrosTitulares = new Vector<Cliente>();
-//        outrosTitulares.add(outroTitular);
-//        outrosTitulares.add(outroTitular);
-//        outrosTitulares.add(maisUmTitular);
-//        contaConjunta.setOutrosTitulares(outrosTitulares);
 //
 //        for (Cliente titulares : contaConjunta.getOutrosTitulares()) {
 //            System.out.println("Nome: " + titulares.getNome() + ", sobrenome: " + titulares.getSobrenome());
@@ -51,6 +46,27 @@ public class SistemaFinanceiro {
         for (Integer chave: clientes.keySet()) {
             System.out.println("Cliente de chave: " + chave + ": " + clientes.get(chave));
         }
+
+        ContaConjunta contaConjunta = new ContaConjunta(titular);
+
+        List<Cliente> outrosTitulares = new Vector<Cliente>();
+        outrosTitulares.add(outroTitular);
+        outrosTitulares.add(outroTitular);
+        outrosTitulares.add(maisUmTitular);
+        contaConjunta.setOutrosTitulares(outrosTitulares);
+
+        Stream<Cliente> stream = outrosTitulares.stream();
+
+        // tradicional
+        for (Cliente cliente: outrosTitulares) {
+            System.out.println(cliente);
+        }
+
+        // iterando em Streams utilizando expressões lambda, para cada elemento, guarde em um cliente e printe cada cliente
+        stream.forEach(cliente -> System.out.println(cliente));
+
+        // forma reduzida, dentro do meu Consumer, que o forEach aceita, que passa a ser o out, execute um método que retorne void, não precisa passar explicitamente printl(cliente) pois a Stream é do tipo Cliente
+        stream.forEach(System.out::println);
 
 
     }
