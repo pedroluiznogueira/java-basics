@@ -3,6 +3,7 @@ package Collections;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 public class SistemaFinanceiro {
 
@@ -26,7 +27,7 @@ public class SistemaFinanceiro {
         ContaConjunta contaConjunta = new ContaConjunta(titular);
 
         // Da para usar herança para adicionar elementos que não sejam do tipo Cliente diretamente
-        List<Cliente> outrosTitulares = new LinkedList<Cliente>();
+        List<Cliente> outrosTitulares = new Vector<Cliente>();
         outrosTitulares.add(outroTitular);
         outrosTitulares.add(outroTitular);
         outrosTitulares.add(maisUmTitular);
