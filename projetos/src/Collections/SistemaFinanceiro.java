@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class SistemaFinanceiro {
@@ -27,15 +28,15 @@ public class SistemaFinanceiro {
         // Os identificadores não precisariam seguir uma ordem sequencial
 
         Cliente titular = new Cliente("Fabio", "Silva");
-        titular.setIdentificador(1);
+//        titular.setIdentificador(1);
 
         Cliente outroTitular = new Cliente("Fulano", "De tal");
-        outroTitular.setIdentificador(2);
+//        outroTitular.setIdentificador(2);
 
         Cliente maisUmTitular = new Cliente("Beltrano", "De tal");
-        maisUmTitular.setIdentificador(3);
+//        maisUmTitular.setIdentificador(3);
 
-        Map<Integer, Cliente> clientes = new HashMap<Integer, Cliente>();
+        Map<String, Cliente> clientes = new HashMap<String, Cliente>();
 
         clientes.put(titular.getIdentificador(), titular);
         clientes.put(titular.getIdentificador(), titular); // não será inserido repetidamente, atualiza o dado anterior
@@ -43,7 +44,7 @@ public class SistemaFinanceiro {
         clientes.put(maisUmTitular.getIdentificador(), maisUmTitular);
 
         // Para cada chave, ele pega as chaves com keySet
-        for (Integer chave: clientes.keySet()) {
+        for (String chave: clientes.keySet()) {
             System.out.println("Cliente de chave: " + chave + ": " + clientes.get(chave));
         }
 
@@ -57,10 +58,9 @@ public class SistemaFinanceiro {
 
         Stream<Cliente> stream = outrosTitulares.stream();
 
-        // tradicional
-        for (Cliente cliente: outrosTitulares) {
-            System.out.println(cliente);
-        }
+        // precisa de um método que retorne algo e aceite um object como parâmetro, que é o contrato de Function lá do map
+        List<Cliente> listaAllterada = stream.map(Teste2::preencherId).collect(Collectors.toList());
+        listaAllterada.stream().forEach(System.out::println);
 
         // iterando em Streams utilizando expressões lambda, para cada elemento, guarde em um cliente e printe cada cliente
         stream.forEach(cliente -> System.out.println(cliente));
@@ -70,6 +70,11 @@ public class SistemaFinanceiro {
 
         // precisa de um Consumer que é alguma classe com o contrato do Consumer e um metodo que não retorna nada
         stream.forEach(Teste::meuMetodo);
+
+        // tradicional
+        for (Cliente cliente: outrosTitulares) {
+            System.out.println(cliente);
+        }
 
 
     }
