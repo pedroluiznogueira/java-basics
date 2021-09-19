@@ -31,8 +31,10 @@ public class SistemaFinanceiro {
 //        }
 
         // Classes wrappers encapsulam os comportamentos dos tipos primitivos
-        // Ordem não importa, não pode haver repetições e todos valores são do mesmo tipo
-        Set<Integer> numeros = new HashSet<Integer>();
+        // O set precisa vir de alguém que extende Object, e tipos primitivos não extendem nada
+
+        // TreeSet ordena-os e não os repete
+        Set<Integer> numeros = new TreeSet<Integer>();
 
         numeros.add(2);
         numeros.add(10);
