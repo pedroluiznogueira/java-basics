@@ -68,6 +68,9 @@ public class SistemaFinanceiro {
         // forma reduzida, dentro do meu Consumer, que o forEach aceita, que passa a ser o out, execute um método que retorne void, não precisa passar explicitamente printl(cliente) pois a Stream é do tipo Cliente
         stream.forEach(System.out::println);
 
+        // precisa de um Consumer que é alguma classe com o contrato do Consumer e um metodo que não retorna nada
+        stream.forEach(Teste::meuMetodo);
+
 
     }
 }
