@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SistemaFinanceiro {
@@ -25,7 +26,7 @@ public class SistemaFinanceiro {
         ContaConjunta contaConjunta = new ContaConjunta(titular);
 
         // Da para usar herança para adicionar elementos que não sejam do tipo Cliente diretamente
-        List<Cliente> outrosTitulares = new ArrayList<>();
+        List<Cliente> outrosTitulares = new LinkedList<Cliente>();
         outrosTitulares.add(outroTitular);
         outrosTitulares.add(outroTitular);
         outrosTitulares.add(maisUmTitular);
