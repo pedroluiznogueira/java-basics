@@ -31,8 +31,8 @@ public class Main {
         peca4.setMarca("Hering");
         peca4.setModelo("Saia");
 
-        lista.add(peca3);
-        lista.add(peca4);
+        lista2.add(peca3);
+        lista2.add(peca4);
 
         System.out.println("Chave: " + guardaVolumes.guardarPecas(lista));
         System.out.println("Chave: " + guardaVolumes.guardarPecas(lista2));

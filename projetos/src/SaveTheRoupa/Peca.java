@@ -20,6 +20,14 @@ public class Peca {
         this.marca = marca;
     }
 
+    @Override
+    public String toString() {
+        return "Marca: " +
+                marca +
+                ", modelo: " +
+                modelo;
+    }
+
     public void retirar() {
 
     }

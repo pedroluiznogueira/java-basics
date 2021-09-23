@@ -14,15 +14,18 @@ public class GuardaVolumes {
     }
 
     public void mostrarPecas() {
-        for (Integer chave : secoes.keySet()) {
-            List<Peca> pecas = secoes.get(chave);
-            System.out.println("Chave: " + chave);
+        for (Integer chave: secoes.keySet()) {
+            mostrarPecas(chave);
+        }
+    }
 
-            for (Peca peca : pecas) {
-                System.out.println("Marca" + peca.getMarca());
-                System.out.println("Marca" + peca.getModelo());
+    public void mostrarPecas(Integer chave) {
+        List<Peca> pecas = secoes.get(chave);
+        System.out.println("Chave: " + chave);
 
-            }
+        for (Peca peca: pecas) {
+            System.out.println(peca);
+
         }
     }
 
