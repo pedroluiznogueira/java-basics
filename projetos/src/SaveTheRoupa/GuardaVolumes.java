@@ -22,6 +22,7 @@ public class GuardaVolumes {
     public void mostrarPecas(Integer chave) {
         List<Peca> pecas = secoes.get(chave);
         System.out.println("Chave: " + chave);
+        pecas.stream().forEach(peca -> System.out.println(peca));
 
         for (Peca peca: pecas) {
             System.out.println(peca);
