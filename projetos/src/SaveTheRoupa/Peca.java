@@ -19,4 +19,8 @@ public class Peca {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    public void retirar() {
+
+    }
 }
