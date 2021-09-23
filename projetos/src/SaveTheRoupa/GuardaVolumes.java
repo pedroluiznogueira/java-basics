@@ -29,6 +29,10 @@ public class GuardaVolumes {
         }
     }
 
+    public void devolverPecas(Integer chave) {
+        secoes.remove(chave);
+    }
+
     public Integer getIdentificadorAtual() {
         return identificadorAtual;
     }

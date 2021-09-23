@@ -38,5 +38,10 @@ public class Main {
         System.out.println("Chave: " + guardaVolumes.guardarPecas(lista2));
 
         guardaVolumes.mostrarPecas();
+        guardaVolumes.mostrarPecas(1);
+        guardaVolumes.mostrarPecas(2);
+
+        guardaVolumes.devolverPecas(1);
+        guardaVolumes.devolverPecas(2);
     }
 }
