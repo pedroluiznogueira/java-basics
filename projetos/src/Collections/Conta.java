@@ -8,16 +8,14 @@ public abstract class Conta {
     private Cliente titular;
 
     // construtor retorna objetos do tipo conta, não especifica retorno
-    public Conta(Cliente titular) {
+    public Conta() {
         this.saldo = 0;
         this.numero = "1";
-        this.titular = titular;
     }
 
-    public Conta(Cliente titular, String conta) {
+    public Conta(String numero) {
         this.saldo = 0;
         this.numero =  numero;
-        this.titular = titular;
     }
 
 
@@ -41,9 +39,9 @@ public abstract class Conta {
         return titular;
     }
 
-    public void setTitular(Cliente titular) {
-        this.titular = titular;
-    }
+//    public void setTitular(Cliente titular) {
+//        this.titular = titular;
+//    }
 
     public void sacar(double valor) {
         this.saldo -= valor;

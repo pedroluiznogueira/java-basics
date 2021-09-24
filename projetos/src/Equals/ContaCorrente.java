@@ -1,3 +1,5 @@
+package Equals;
+
 public class ContaCorrente extends Conta {
 
     public ContaCorrente(Cliente titular) {

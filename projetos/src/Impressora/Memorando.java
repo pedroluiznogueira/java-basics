@@ -1,3 +1,5 @@
+package Impressora;
+
 public class Memorando extends DocumentoGenerico implements Imprimivel {
     private String numero;
 

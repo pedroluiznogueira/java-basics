@@ -5,7 +5,7 @@ public class ContaEspecial extends ContaCorrente {
     private double limite;
 
     public ContaEspecial(Cliente titular) {
-        super(titular);
+//        super(titular);
         this.limite = 1000;
     }
 

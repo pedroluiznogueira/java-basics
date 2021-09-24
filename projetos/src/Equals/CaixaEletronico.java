@@ -1,3 +1,5 @@
+package Equals;
+
 public class CaixaEletronico {
 
     private Conta conta;

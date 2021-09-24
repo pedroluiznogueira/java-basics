@@ -1,3 +1,5 @@
+package Impressora;
+
 public class Foto extends DocumentoGenerico implements Imprimivel {
     @Override
     public void imprimir() {

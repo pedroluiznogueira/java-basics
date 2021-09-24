@@ -1,3 +1,5 @@
+package Impressora;
+
 public class Documento extends DocumentoGenerico implements Imprimivel {
 
     @Override

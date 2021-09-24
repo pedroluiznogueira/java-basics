@@ -9,9 +9,9 @@ public class CaixaEletronico {
         cliente.setNome("Fulano");
         cliente.setSobrenome("De tal");
 
-        ContaCorrente contaCorrente = new ContaCorrente(cliente, "2");
+//        ContaCorrente contaCorrente = new ContaCorrente(cliente, "2");
 
-        this.conta = contaCorrente;
+//        this.conta = contaCorrente;
 
         System.out.println("Bem vindo cliente: " + cliente.getNome());
     }

@@ -1,3 +1,5 @@
+package Impressora;
+
 public class Impressora {
     // Relaciona à não podermos instanciar objetos da impressora e da interface imprimiveis
     private DocumentoGenerico[] documentos = new DocumentoGenerico[10];

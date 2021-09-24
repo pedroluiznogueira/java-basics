@@ -1,3 +1,5 @@
+package Impressora;
+
 public class TrabalhoDeEscola {
     // Não faz sentido aqui ter os atributos nome e tipo, aqui seria uma gambiarra
 

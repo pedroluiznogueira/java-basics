@@ -1,3 +1,5 @@
+package Impressora;
+
 public abstract class DocumentoGenerico {
     private String tipo;
     private String nome;
@@ -19,7 +21,7 @@ public abstract class DocumentoGenerico {
         this.nome = nome;
     }
 
-    public abstract void imprimir() {
+    public void imprimir() {
 
     }
 }

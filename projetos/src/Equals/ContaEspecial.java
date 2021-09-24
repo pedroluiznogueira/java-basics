@@ -1,3 +1,5 @@
+package Equals;
+
 public class ContaEspecial extends ContaCorrente {
 
     private double limite;

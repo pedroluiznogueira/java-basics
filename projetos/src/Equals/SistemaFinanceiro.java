@@ -1,3 +1,5 @@
+package Equals;
+
 public class SistemaFinanceiro {
 
     public static void main(String[] args) {
