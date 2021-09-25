@@ -18,6 +18,9 @@ public abstract class Conta {
         this.numero =  numero;
     }
 
+    public Conta(Cliente titular) {
+        this.titular = titular;
+    }
 
     public String getNumero() {
         return numero;
@@ -39,9 +42,9 @@ public abstract class Conta {
         return titular;
     }
 
-//    public void setTitular(Cliente titular) {
-//        this.titular = titular;
-//    }
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
 
     public void sacar(double valor) {
         this.saldo -= valor;

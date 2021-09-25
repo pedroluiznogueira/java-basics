@@ -1,47 +1,70 @@
 package SaveTheRoupa;
-
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("=========== Peças Hering ===========");
 
+        // criando uma lista de pecas da Hering
+        List<Peca> pecasHering = new ArrayList<Peca>();
+
+        // criando pecas
+        Peca pecaUmH = new Peca("Hering", "camiseta");
+        Peca pecaDoisH = new Peca("Hering", "shorts");
+        Peca pecaTresH = new Peca("Hering", "calça");
+
+        // adicionando pecas na lista de peca
+        pecasHering.add(pecaUmH);
+        pecasHering.add(pecaDoisH);
+        pecasHering.add(pecaTresH);
+
+        // imprimindo cada peça
+        for (Peca peca : pecasHering) {
+            System.out.println(peca);
+        }
+
+        System.out.println("=========== Peças Renner ===========");
+
+        // criando uma lista de pecas da Renner
+        List<Peca> pecasRenner = new ArrayList<Peca>();
+
+        // criando pecas
+        Peca pecaUmR = new Peca("Renner", "blusa");
+        Peca pecaDoisR = new Peca("Renner", "toca");
+        Peca pecaTresR = new Peca("Renner", "meia");
+
+        // adicionando pecas na lista de peca
+        pecasRenner.add(pecaUmR);
+        pecasRenner.add(pecaDoisR);
+        pecasRenner.add(pecaTresR);
+
+        // imprimindo cada peça
+        for (Peca peca : pecasRenner) {
+            System.out.println(peca);
+        }
+
+        // criando guarda volumes
         GuardaVolumes guardaVolumes = new GuardaVolumes();
 
-        List<Peca> lista = new ArrayList<Peca>();
+        // guardando listas de pecas nos guarda volumes
+        String idHering = guardaVolumes.guardarPecas(pecasHering);
+        String idRenner = guardaVolumes.guardarPecas(pecasRenner);
 
-        Peca peca1 = new Peca();
-        peca1.setMarca("Hering");
-        peca1.setModelo("Camiseta");
-
-        Peca peca2 = new Peca();
-        peca2.setMarca("Hering");
-        peca2.setModelo("Bermuda");
-
-        lista.add(peca1);
-        lista.add(peca2);
-
-        List<Peca> lista2 = new ArrayList<Peca>();
-
-        Peca peca3 = new Peca();
-        peca3.setMarca("Hering");
-        peca3.setModelo("Top");
-
-        Peca peca4 = new Peca();
-        peca4.setMarca("Hering");
-        peca4.setModelo("Saia");
-
-        lista2.add(peca3);
-        lista2.add(peca4);
-
-        System.out.println("Chave: " + guardaVolumes.guardarPecas(lista));
-        System.out.println("Chave: " + guardaVolumes.guardarPecas(lista2));
-
+        System.out.println("======== Pecas do Guarda Volumes ========");
         guardaVolumes.mostrarPecas();
-        guardaVolumes.mostrarPecas(1);
-        guardaVolumes.mostrarPecas(2);
 
-        guardaVolumes.devolverPecas(1);
-        guardaVolumes.devolverPecas(2);
+        System.out.println(idHering);
+        System.out.println(idRenner);
+
+        System.out.println("======== Puxando Peças pelo Id Único ========");
+        guardaVolumes.mostrarPecas(idHering);
+        guardaVolumes.mostrarPecas(idRenner);
+
+        System.out.println("======== Removendo Peças pelo Id Único ========");
+        guardaVolumes.devolverPecas(idHering);
+
+        System.out.println("======== Pecas do Guarda Volumes Após Remoção ========");
+        guardaVolumes.mostrarPecas();
     }
 }

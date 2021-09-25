@@ -4,31 +4,20 @@ public class Peca {
     private String marca;
     private String modelo;
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
+    public Peca(String marca, String modelo) {
         this.marca = marca;
-    }
-
-    @Override
-    public String toString() {
-        return "Marca: " +
-                marca +
-                ", modelo: " +
-                modelo;
+        this.modelo = modelo;
     }
 
     public void retirar() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Peca{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
     }
 }
