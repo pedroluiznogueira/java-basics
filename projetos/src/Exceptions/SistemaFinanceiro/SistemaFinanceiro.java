@@ -21,7 +21,7 @@ public class SistemaFinanceiro {
             conta.sacar(-1);
             System.out.println(conta.consultarSaldo());
 
-        } catch (NumberFormatException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Valor inválido: " + e.getMessage());
 
         } catch (Exception e) {
