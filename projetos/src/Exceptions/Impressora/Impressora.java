@@ -26,10 +26,17 @@ public class Impressora {
 //            }
 //
 //        }
-        Arrays.
-                asList(documentos)
-                .stream()
-                .filter(documento -> documento != null)
-                .forEach(DocumentoGenerico::imprimir);
+
+        // envolvendo o que vai tentar ser executado
+        try {
+            Arrays.
+                    asList(documentos)
+                    .stream()
+                    .forEach(DocumentoGenerico::imprimir);
+        }
+        // como eu vi que foi um NullPointerException que foi disparado
+        catch (NullPointerException e) {
+            System.out.println("Elemento nulo");
+        }
     }
 }
