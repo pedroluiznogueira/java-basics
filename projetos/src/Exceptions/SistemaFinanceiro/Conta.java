@@ -1,3 +1,4 @@
+
 package Exceptions.SistemaFinanceiro;
 
 // modelo, não crio mais objeto diretos
@@ -61,7 +62,7 @@ public abstract class Conta {
     }
 
     // Consumível passa a excessão à frente, pois quer que a excessão seja tratada pelo Consumidor
-    public void transferir(double valor, Conta destino) {
+    public void transferir(double valor, Conta destino) throws Exception {
         this.sacar(valor);
         destino.depositar(valor);
     }
