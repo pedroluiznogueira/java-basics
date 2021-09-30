@@ -1,4 +1,3 @@
-
 package Exceptions.SistemaFinanceiro;
 
 // modelo, não crio mais objeto diretos
@@ -52,7 +51,10 @@ public abstract class Conta {
             // avisar que aqui pode ter uma excessão
             throw new Exception("Valor para saque pode ser menor ou igual a 0");
             // ou você avisa essa excessão ou você trata aqui
-
+        }
+        if (saldo < valor) {
+            // avisar que aqui pode ter uma excessão
+            throw new Exception("Saldo pode ser insuficiente");
         }
         this.saldo -= valor;
     }
