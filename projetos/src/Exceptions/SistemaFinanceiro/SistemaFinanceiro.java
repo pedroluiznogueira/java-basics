@@ -32,8 +32,16 @@ public class SistemaFinanceiro {
             conta.sacar(10000);
         }
         // a excessão avisada vai ser tratada aqui, mesmo que ao ser consumida aqui, não precise ser feita a diferença entre qual é
-        catch (Exception e) {
+        catch (SaldoInsuficienteException e) {
+            System.out.println("Valor inválido: " + e.getMessage());
+        } catch (Exception e) {
             System.out.println("Valor inválido: " + e.getMessage());
         }
+
+        // relacionando método transferência
+        Conta contaDestino = new ContaCorrente(titular);
+        // método sacar vai ser chamado por transferir
+        conta.transferir(-1, contaDestino);
+
     }
 }
