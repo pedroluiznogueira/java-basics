@@ -29,7 +29,11 @@ public class CaixaEletronico {
         if (this.conta == null) {
             System.out.println("Faca primeiro sua autenticação!");
         } else {
-            this.conta.sacar(valor);
+            try {
+                this.conta.sacar(valor);
+            } catch (Exception e) {
+                System.out.println("Valopr inválido para saque");
+            }
             System.out.println("Saque efetuado com sucesso");
             System.out.println("O seu saldo é " + this.conta.consultarSaldo());
         }
@@ -45,11 +49,16 @@ public class CaixaEletronico {
         }
     }
 
+    // caixa eletrônico é um consumidor, então faz sentido tratar a excessão aqui
     public void efetuarTransferencia(Conta destino, double valor) {
         if (this.conta == null) {
             System.out.println("Faca primeiro sua autenticação!");
         } else {
-            this.conta.transferir(valor, destino);
+            try {
+                this.conta.transferir(valor, destino);
+            } catch (Exception e) {
+                System.out.println("Valor inválido para transferência");
+            }
             System.out.println("Transferência efetuada com sucesso");
             System.out.println("O seu saldo é " + this.conta.consultarSaldo());
         }
