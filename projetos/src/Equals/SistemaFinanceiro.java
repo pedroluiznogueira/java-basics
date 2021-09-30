@@ -22,28 +22,28 @@ public class SistemaFinanceiro {
         System.out.println(cliente);
 
         // Representam coisas diferentes em memória
-        ContaCorrente conta1 = new ContaCorrente(cliente);
-        conta1.setNumero("12345");
+//        ContaCorrente conta1 = new ContaCorrente(cliente);
+//        conta1.setNumero("12345");
+//
+//        ContaCorrente conta2 = new ContaCorrente(cliente);
+//        conta1.setNumero("12345");
 
-        ContaCorrente conta2 = new ContaCorrente(cliente);
-        conta1.setNumero("12345");
-
-        if (conta2.equals(null)) {
-            System.out.println("Objetos iguais");
-        } else {
-            System.out.println("Objetos diferentes");
-        }
-
-        if (conta2.equals(conta2)) {
-            System.out.println("Objetos iguais");
-        } else {
-            System.out.println("Objetos diferentes");
-        }
-
-        if (conta2.equals(conta1)) {
-            System.out.println("contas iguais");
-        } else {
-            System.out.println("contas diferentes");
-        }
+//        if (conta2.equals(null)) {
+//            System.out.println("Objetos iguais");
+//        } else {
+//            System.out.println("Objetos diferentes");
+//        }
+//
+//        if (conta2.equals(conta2)) {
+//            System.out.println("Objetos iguais");
+//        } else {
+//            System.out.println("Objetos diferentes");
+//        }
+//
+//        if (conta2.equals(conta1)) {
+//            System.out.println("contas iguais");
+//        } else {
+//            System.out.println("contas diferentes");
+//        }
     }
 }

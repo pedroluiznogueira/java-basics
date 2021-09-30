@@ -1,4 +1,4 @@
-package Collections;
+package Exceptions.SistemaFinanceiro;
 
 import java.util.*;
 import java.util.stream.Collectors;

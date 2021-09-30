@@ -1,4 +1,4 @@
-package Collections;
+package Exceptions.SistemaFinanceiro;
 
 // modelo, não crio mais objeto diretos
 public abstract class Conta {

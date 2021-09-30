@@ -1,4 +1,4 @@
-package Collections;
+package Exceptions.SistemaFinanceiro;
 
 public class ContaPoupanca extends Conta {
 
