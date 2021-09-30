@@ -54,7 +54,7 @@ public abstract class Conta {
         }
         if (saldo < valor) {
             // avisar que aqui pode ter uma excessão
-            throw new Exception("Saldo pode ser insuficiente");
+            throw new SaldoInsuficienteException("Saldo pode ser insuficiente - Usando SaldoInsuficienteException -");
         }
         this.saldo -= valor;
     }
