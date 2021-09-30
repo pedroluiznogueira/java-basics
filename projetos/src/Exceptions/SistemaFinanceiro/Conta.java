@@ -45,7 +45,7 @@ public abstract class Conta {
         this.titular = titular;
     }
 
-    public void sacar(double valor) throws Exception, IllegalArgumentException {
+    public void sacar(double valor) throws IllegalArgumentException, SaldoInsuficienteException {
         System.out.println("Tentativa de saque na conta" + this.numero + " no valor de: " + valor);
         if (valor <= 0) {
             // avisar que aqui pode ter uma excessão
