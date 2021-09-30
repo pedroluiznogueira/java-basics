@@ -20,9 +20,11 @@ public class SistemaFinanceiro {
             // criando situação problema, o método vai acabar adicionando 1 (saldo = saldo - (-1))
             conta.sacar(-1);
             System.out.println(conta.consultarSaldo());
-        }
-        // a excessão avisada vai ser tratada aqui
-        catch (NumberFormatException e) {
+
+        } catch (NumberFormatException e) {
+            System.out.println("Valor inválido: " + e.getMessage());
+
+        } catch (Exception e) {
             System.out.println("Valor inválido: " + e.getMessage());
         }
 
