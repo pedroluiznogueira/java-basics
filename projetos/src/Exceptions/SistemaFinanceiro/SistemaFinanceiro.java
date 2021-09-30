@@ -16,8 +16,14 @@ public class SistemaFinanceiro {
         conta.sacar(10);
         System.out.println(conta.consultarSaldo());
 
-        // criando situação problema, o método vai acabar adicionando 1 (saldo = saldo - (-1))
-        conta.sacar(-1);
-        System.out.println(conta.consultarSaldo());
+        try {
+            // criando situação problema, o método vai acabar adicionando 1 (saldo = saldo - (-1))
+            conta.sacar(-1);
+            System.out.println(conta.consultarSaldo());
+        }
+        // a excessão avisada vai ser tratada aqui
+        catch (Exception e) {
+            System.out.println("Valor inválido");
+        }
     }
 }
