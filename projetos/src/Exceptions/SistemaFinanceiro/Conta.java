@@ -60,6 +60,7 @@ public abstract class Conta {
         this.saldo += valor;
     }
 
+    // Consumível passa a excessão à frente, pois quer que a excessão seja tratada pelo Consumidor
     public void transferir(double valor, Conta destino) {
         this.sacar(valor);
         destino.depositar(valor);
