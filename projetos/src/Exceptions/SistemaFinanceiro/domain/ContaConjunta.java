@@ -1,4 +1,7 @@
-package Exceptions.SistemaFinanceiro;
+package Exceptions.SistemaFinanceiro.domain;
+
+import Exceptions.SistemaFinanceiro.domain.Cliente;
+import Exceptions.SistemaFinanceiro.domain.Conta;
 
 import java.util.ArrayList;
 import java.util.List;

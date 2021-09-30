@@ -1,8 +1,9 @@
-package Exceptions.SistemaFinanceiro;
+package Exceptions.SistemaFinanceiro.view;
 
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import Exceptions.SistemaFinanceiro.domain.Cliente;
+import Exceptions.SistemaFinanceiro.domain.Conta;
+import Exceptions.SistemaFinanceiro.domain.ContaCorrente;
+import Exceptions.SistemaFinanceiro.exceptions.SaldoInsuficienteException;
 
 public class SistemaFinanceiro {
 

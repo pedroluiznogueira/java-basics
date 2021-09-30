@@ -1,4 +1,8 @@
-package Exceptions.SistemaFinanceiro;
+package Exceptions.SistemaFinanceiro.view;
+
+import Exceptions.SistemaFinanceiro.domain.Cliente;
+import Exceptions.SistemaFinanceiro.domain.Conta;
+import Exceptions.SistemaFinanceiro.domain.ContaCorrente;
 
 public class CaixaEletronico {
 

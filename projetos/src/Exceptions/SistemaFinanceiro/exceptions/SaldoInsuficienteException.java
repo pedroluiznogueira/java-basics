@@ -1,4 +1,4 @@
-package Exceptions.SistemaFinanceiro;
+package Exceptions.SistemaFinanceiro.exceptions;
 
 public class SaldoInsuficienteException extends Exception {
     private String message;

@@ -1,4 +1,6 @@
-package Exceptions.SistemaFinanceiro;
+package Exceptions.SistemaFinanceiro.domain;
+
+import Exceptions.SistemaFinanceiro.exceptions.SaldoInsuficienteException;
 
 // modelo, não crio mais objeto diretos
 public abstract class Conta {

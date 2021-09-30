@@ -1,4 +1,4 @@
-package Exceptions.SistemaFinanceiro;
+package Exceptions.SistemaFinanceiro.domain;
 
 public class Cliente {
 
