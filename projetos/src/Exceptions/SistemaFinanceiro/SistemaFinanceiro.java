@@ -22,7 +22,7 @@ public class SistemaFinanceiro {
             System.out.println(conta.consultarSaldo());
         }
         // a excessão avisada vai ser tratada aqui
-        catch (Exception e) {
+        catch (NumberFormatException e) {
             System.out.println("Valor inválido: " + e.getMessage());
         }
 

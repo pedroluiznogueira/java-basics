@@ -45,11 +45,11 @@ public abstract class Conta {
         this.titular = titular;
     }
 
-    public void sacar(double valor) throws Exception {
+    public void sacar(double valor) throws Exception, NumberFormatException {
         System.out.println("Tentativa de saque na conta" + this.numero + " no valor de: " + valor);
         if (valor <= 0) {
             // avisar que aqui pode ter uma excessão
-            throw new Exception("Valor para saque pode ser menor ou igual a 0");
+            throw new NumberFormatException("Valor para saque pode ser menor ou igual a 0");
             // ou você avisa essa excessão ou você trata aqui
         }
         if (saldo < valor) {
