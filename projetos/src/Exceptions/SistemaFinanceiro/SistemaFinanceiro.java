@@ -30,11 +30,7 @@ public class SistemaFinanceiro {
 
         try {
             conta.sacar(10000);
-        }
-        // a excessão avisada vai ser tratada aqui, mesmo que ao ser consumida aqui, não precise ser feita a diferença entre qual é
-        catch (SaldoInsuficienteException e) {
-            System.out.println("Valor inválido: " + e.getMessage());
-        } catch (Exception e) {
+        } catch (IllegalArgumentException | SaldoInsuficienteException e) {
             System.out.println("Valor inválido: " + e.getMessage());
         }
 
