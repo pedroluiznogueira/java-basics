@@ -35,8 +35,10 @@ public class Impressora {
                     .forEach(DocumentoGenerico::imprimir);
         }
         // como eu vi que foi um NullPointerException que foi disparado
-        catch (NullPointerException e) {
+        catch (NullPointerException variavelErro) {
             System.out.println("Elemento nulo");
+            // te mostra no console aonde o erro aconteceu
+            variavelErro.printStackTrace();
         }
     }
 }
