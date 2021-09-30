@@ -23,7 +23,15 @@ public class SistemaFinanceiro {
         }
         // a excessão avisada vai ser tratada aqui
         catch (Exception e) {
-            System.out.println("Valor inválido");
+            System.out.println("Valor inválido: " + e.getMessage());
+        }
+
+        try {
+            conta.sacar(10000);
+        }
+        // a excessão avisada vai ser tratada aqui, mesmo que ao ser consumida aqui, não precise ser feita a diferença entre qual é
+        catch (Exception e) {
+            System.out.println("Valor inválido: " + e.getMessage());
         }
     }
 }
